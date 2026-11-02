@@ -1,0 +1,37 @@
+{
+  "project": "AeroFootprint",
+  "title": "AeroFootprint - WHU Aerial Building Segmentation",
+  "dataset": "giswqs/WHU-Building-Dataset",
+  "dataset_license": "CC BY 4.0 (as declared by the Hugging Face dataset card)",
+  "training": "TensorFlow/Keras four-level U-Net trained from random initialization; no pretrained weights",
+  "train_images": 5732,
+  "validation_images": 1228,
+  "test_images": 1228,
+  "source_tile_size": [
+    512,
+    512
+  ],
+  "model_patch_size": 256,
+  "epochs": 25,
+  "batch_size": 8,
+  "base_filters": 32,
+  "threshold": 0.55,
+  "threshold_selected_on": "validation split only",
+  "test_metrics_micro": {
+    "dice": 0.9128037553405524,
+    "iou": 0.839594286518602,
+    "precision": 0.9173524994500166,
+    "recall": 0.9082998990607075
+  },
+  "test_metrics_macro_per_image": {
+    "dice": 0.894714010392525,
+    "iou": 0.8336131721119764,
+    "precision": 0.914177804508604,
+    "recall": 0.9032028777270842
+  },
+  "test_tile_count_from_csv": 1228,
+  "empty_ground_truth_tiles": 223,
+  "empty_ground_truth_and_empty_prediction_tiles": 211,
+  "metric_note": "Macro per-image metrics assign 1.0 to empty-ground-truth/empty-prediction tiles. Prefer micro metrics as headline results.",
+  "geospatial_limitation": "PNG mirror has no per-tile geotransform; exported contours are in pixel coordinates, not latitude/longitude."
+}

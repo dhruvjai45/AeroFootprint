@@ -1,0 +1,7 @@
+# TensorFlow is supplied by Google Colab. The notebook installs these runtime packages.
+huggingface_hub[hf_xet]
+pillow
+opencv-python-headless
+matplotlib
+pandas
+tqdm

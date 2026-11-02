@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local datasets and caches (do not commit raw WHU images/masks)
+data/
+dataset/
+datasets/
+.cache/
+huggingface/
+
+# Training artifacts and model weights
+models/
+checkpoints/
+backup/
+artifacts/
+outputs/
+*.keras
+*.h5
+*.weights.h5
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
